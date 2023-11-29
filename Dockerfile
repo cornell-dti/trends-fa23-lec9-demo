@@ -19,7 +19,7 @@ RUN pnpm install
 RUN pnpm run build
 
 # Copy necessary build outputs and dependencies to nginx
-RUN cp -r ./frontend/dist/* /usr/share/nginx/html/
+RUN cp -r ./client/dist/* /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose the port Nginx is running on
